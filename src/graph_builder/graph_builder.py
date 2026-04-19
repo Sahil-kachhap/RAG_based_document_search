@@ -5,7 +5,7 @@ from src.nodes.nodes import RAGNodes
 
 class GraphBuilder:
     def __init__(self, retriever, llm):
-        self.nodes = RAGNodes()
+        self.nodes = RAGNodes(retriever, llm)
         self.graph = None
 
     def build(self):
