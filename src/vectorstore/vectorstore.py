@@ -2,16 +2,17 @@
 
 from typing import List
 from langchain_community.vectorstores import FAISS
-from langchain_openai import OpenAIEmbeddings
-from langchain.schema import Document
-
+from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_core.documents import Document
 
 class VectorStore:
     """Manages vector store operations"""
     
     def __init__(self):
-        """Initialize vector store with OpenAI embeddings"""
-        self.embedding = OpenAIEmbeddings()
+        """Initialize vector store with HuggingFace embeddings"""
+        self.embedding = HuggingFaceEmbeddings(
+            model_name="sentence-transformers/all-MiniLM-L6-v2"  # fast & free
+        )
         self.vectorstore = None
         self.retriever = None
     
