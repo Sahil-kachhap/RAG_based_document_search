@@ -1,12 +1,16 @@
 langchain
 langchain-community
-langchain-openai
+langchain-huggingface
+langchain_groq
 langgraph
 openai
 faiss-cpu
 pydantic
+pypdf
 python-dotenv
 beautifulsoup4
 requests
 streamlit
+sentence-transformers
 wikipedia
+torchvision
